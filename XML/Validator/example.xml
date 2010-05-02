@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<workflow>
+
+<model-list>
+  <model/>
+</model-list>
+
+
+<rule-list>
+  <rule>
+    <if>
+      <field>
+        <value/>
+      </field>
+    </if>
+    <then>
+      <action-list>
+        <action>
+          <field/>
+          <field-hide/>
+        </action>
+      </action-list>
+    </then>
+  </rule>
+</rule-list>
+
+</workflow>

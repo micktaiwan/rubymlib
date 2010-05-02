@@ -1,0 +1,33 @@
+body {
+   font-family: Arial;
+   font-size: 10pt;
+   }
+.dmd_title {
+   color: #FF0000;
+   }
+.dmd_actions {
+   color: #AA0000;
+   font-weight: bold;
+   }
+.dmd_analyse {
+   color: #00AA00;
+   }
+.dmd_source {
+   color: #888;
+   }
+.dmd_id {
+   font-weight: bold;
+   }
+.dmd_om {
+   font-weight: bold;
+   }   
+.dmd_status {
+   font-style: italic;
+   }
+.dmd_analyse_status {
+   font-style: italic;
+   }
+.open {
+   color: red;
+   font-weight: bold;
+   }   

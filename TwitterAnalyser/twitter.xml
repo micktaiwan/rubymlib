@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statuses type="array">
+  <status>
+    <created_at>Thu May 01 14:58:39 +0000 2008</created_at>
+    <id>801221485</id>
+    <text>Il est 16:00 (1209650402) !</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>9406502</id>
+      <name>L'Horloge Twittante!</name>
+      <screen_name>horloge</screen_name>
+      <location>Twitter</location>
+      <description>Je donne l'heure. Oui, vraiment.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/33107792/1071881251_0487f08d09_normal.jpg</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>121</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:39 +0000 2008</created_at>
+    <id>801221484</id>
+    <text>I'm now a Google AdWords Professional. I guess that's something.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14454180</id>
+      <name>kellywatson</name>
+      <screen_name>kellywatson</screen_name>
+      <location>Lancaster, Pennsylvania</location>
+      <description>I'm the owner of Wordwise Marketing.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53061703/080407-Headshot_normal.jpg</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>18</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:39 +0000 2008</created_at>
+    <id>801221482</id>
+    <text>@hiro_y amanat.to&#12399;&#65311;</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801220792</in_reply_to_status_id>
+    <in_reply_to_user_id>3628001</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>5585092</id>
+      <name>&#12415;&#12435;&#12392;</name>
+      <screen_name>mint99</screen_name>
+      <location>&#21271;&#12434;&#30446;&#25351;&#12375;&#12390;&#12356;&#12427;&#12290;</location>
+      <description>&#26397;&#23517;&#12290;&#20108;&#24230;&#23517;&#12290;&#26172;&#23517;&#12290;&#36578;&#23517;&#12290;&#22812;&#26356;&#12363;&#12375;&#12290;&#27468;&#12387;&#12390;&#12394;&#12356;&#12392;&#30496;&#12356;&#12290;&#36867;&#20129;&#20013;&#12290;&#12388;&#12363;&#12414;&#12426;&#12383;&#12367;&#12394;&#12356;&#12290;&#35598;&#12417;&#12356;&#12390;&#12356;&#12383;&#12356;&#12290;&#12373;&#12364;&#12373;&#12394;&#12356;&#12391;&#12367;&#12384;&#12373;&#12356;&#12290;</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53190038/lotta4_normal.jpg</profile_image_url>
+      <url>http://tinyurl.com/4mwfpu</url>
+      <protected>false</protected>
+      <followers_count>34</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:37 +0000 2008</created_at>
+    <id>801221479</id>
+    <text>@datagoddess lends itself well to early morning romps as well  ;-)</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801220260</in_reply_to_status_id>
+    <in_reply_to_user_id>7981182</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>2491191</id>
+      <name>nan</name>
+      <screen_name>roguepuppet</screen_name>
+      <location>Indiana</location>
+      <description>just another geek goddess in the blogosphere</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/34193432/newNan_normal.jpg</profile_image_url>
+      <url>http://roguepuppet.livejournal.com</url>
+      <protected>false</protected>
+      <followers_count>294</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:39 +0000 2008</created_at>
+    <id>801221478</id>
+    <text>Explicando Open Screen project para los no iniciados http://tinyurl.com/6b6ufc</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>820025</id>
+      <name>Ciro</name>
+      <screen_name>chiguire</screen_name>
+      <location>Caracas</location>
+      <description>Mezcla rara de pen&#250;ltimo linyera y de primer polizonte en el viaje a Venus.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52780701/cdo_normal.jpg</profile_image_url>
+      <url>http://www.ciroduran.com/blog</url>
+      <protected>false</protected>
+      <followers_count>211</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:38 +0000 2008</created_at>
+    <id>801221477</id>
+    <text>6-4 Schultz-McCarthy</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14521149</id>
+      <name>itsme0912</name>
+      <screen_name>itsme0912</screen_name>
+      <location>CHARLOTTESVILLE, VA USA</location>
+      <description></description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53514576/DSC03343_normal.JPG</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>7</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:38 +0000 2008</created_at>
+    <id>801221476</id>
+    <text>@zefrank bring back some neutrality .. maybe we can spread it around ... World Peace, you know ... and 'course chocolates! =)</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801213796</in_reply_to_status_id>
+    <in_reply_to_user_id>11340982</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14319308</id>
+      <name>Ankit.G</name>
+      <screen_name>ankitg</screen_name>
+      <location>127.0.0.1</location>
+      <description>Retired Student</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52504358/Picture_1_normal.png</profile_image_url>
+      <url>http://ankitguglani.wordpress.com</url>
+      <protected>false</protected>
+      <followers_count>19</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:37 +0000 2008</created_at>
+    <id>801221475</id>
+    <text>&#12358;&#12540;&#12435;&#12289;&#12501;&#12522;&#12540;&#12480;&#12512;&#12391;&#12391;&#12383;&#12425;&#12300;&#23432;&#12426;&#12383;&#12356;&#19990;&#30028;&#12364;&#12354;&#12427;&#12435;&#12384;&#12540;&#12540;&#65281;&#12301;&#12391;&#12377;&#12368;&#32066;&#12431;&#12387;&#12385;&#12419;&#12358;</text>
+    <source>&lt;a href="http://cheebow.info/chemt/archives/2007/04/twitterwindowst.html"&gt;Twit&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>5792242</id>
+      <name>&#12375;&#12398;&#12398;&#12417;</name>
+      <screen_name>Sinonome</screen_name>
+      <location>Saitama,Japan</location>
+      <description>&#39164;&#12356;&#20027;&#21215;&#38598;&#20013;&#12290;</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52464249/kyoko_normal.jpg</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>625</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:37 +0000 2008</created_at>
+    <id>801221474</id>
+    <text>@jstylman re: the Conversational Marketing event, I'll be in NYC speaking at a PRSA event happening at the same time. I'll ping you.</text>
+    <source>&lt;a href="http://www.twhirl.org/"&gt;twhirl&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>800772103</in_reply_to_status_id>
+    <in_reply_to_user_id>8731812</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>871891</id>
+      <name>Lee Odden</name>
+      <screen_name>leeodden</screen_name>
+      <location>Minneapolis, MN</location>
+      <description>Marketer, blogger &amp; entrepreneur.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/34134252/lee-side_normal.jpg</profile_image_url>
+      <url>http://toprankblog.com</url>
+      <protected>false</protected>
+      <followers_count>1306</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:38 +0000 2008</created_at>
+    <id>801221473</id>
+    <text>Scientists create a new electronic componet the memristor, the memory resistor. http://tinyurl.com/58jq9d</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>3856441</id>
+      <name>Ryan Miller</name>
+      <screen_name>RMiller</screen_name>
+      <location>Stephenville, Texas</location>
+      <description>College student getting my BA in computer science</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/21068072/Me_Croped_normal.jpg</profile_image_url>
+      <url>http://www.angelaandryan.name</url>
+      <protected>false</protected>
+      <followers_count>4</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221472</id>
+    <text>@bengrubb That SHOULD be the feed problem fixed - thats again :D</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801215398</in_reply_to_status_id>
+    <in_reply_to_user_id>9290802</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>9175902</id>
+      <name>Neil Greenhorn</name>
+      <screen_name>WizzKid</screen_name>
+      <location>Aberdeen</location>
+      <description>Gamer, Blogger, Coder. http://www.wizzhack.co.uk/about-me/</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/51916269/wizzkid_normal.gif</profile_image_url>
+      <url>http://www.wizzhack.co.uk</url>
+      <protected>false</protected>
+      <followers_count>105</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:38 +0000 2008</created_at>
+    <id>801221471</id>
+    <text>@shirotan &#26368;&#39640;&#12377;&#12366;&#12427;&#65281;&#12399;&#12353;&#12399;&#12353;&#65381;&#65381;&#65381;&#12290;&#29992;&#12399;&#28168;&#12435;&#12384;&#12363;&#12425;&#24043;&#22899;&#12391;&#12418;&#35211;&#12390;&#23517;&#12394;&#12373;&#12356;</text>
+    <source>&lt;a href="http://d.hatena.ne.jp/lynmock/20071107/p2"&gt;P3:PeraPeraPrv&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801210096</in_reply_to_status_id>
+    <in_reply_to_user_id>14433712</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>10217692</id>
+      <name>&#12354;&#12362;</name>
+      <screen_name>aoruru</screen_name>
+      <location>&#31119;&#23713;&#65292;Japan</location>
+      <description>&#28459;&#30011;&#65381;&#12450;&#12491;&#12513;&#12539;&#12521;&#12494;&#12505;&#12539;erg&#12539;&#21516;&#20154;&#35468;&#12539;&#12525;&#12522;&#12540;&#12479;&#12501;&#12449;&#12483;&#12471;&#12519;&#12531;&#12539;&#12362;&#32117;&#12363;&#12365;&#12377;&#12365;&#12290;SNS&#36969;&#24403;&#12395;&#21442;&#21152;&#12375;&#12390;&#12414;&#12377;&#12290;</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53478201/i_normal.jpg</profile_image_url>
+      <url>http://d.hatena.ne.jp/RuruTan/</url>
+      <protected>false</protected>
+      <followers_count>231</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221470</id>
+    <text>&#12417;&#12387;&#12385;&#12419;&#12356;&#12356;&#12290;&#12371;&#12428;&#35211;&#12394;&#12365;&#12419;&#12290;&#20840;&#28982;&#12473;&#12540;&#12501;&#12449;&#12522;&#12385;&#12419;&#12358;&#12369;&#12393;&#12290;</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>5089001</id>
+      <name>taira</name>
+      <screen_name>taira</screen_name>
+      <location>Tokyo, Japan</location>
+      <description>http://mixi.jp/show_friend.pl?id=2387196</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/15605122/_____normal.jpg</profile_image_url>
+      <url>http://a-place.jp/</url>
+      <protected>false</protected>
+      <followers_count>43</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:37 +0000 2008</created_at>
+    <id>801221469</id>
+    <text>&#8220;Alfons und Olaf&#8221; - Ein Fazit http://tinyurl.com/4vxcxy</text>
+    <source>&lt;a href="http://twitterfeed.com"&gt;twitterfeed&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14083809</id>
+      <name>off_the_record</name>
+      <screen_name>off_the_record</screen_name>
+      <location>Frankfurt</location>
+      <description>Blogger, Editor - Olaf Kolbr&#252;ck</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52172701/recordmann_normal.jpg</profile_image_url>
+      <url>http://www.off-the-record.de/</url>
+      <protected>false</protected>
+      <followers_count>239</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:38 +0000 2008</created_at>
+    <id>801221468</id>
+    <text>conference call, then lunch meeting at pei wei</text>
+    <source>&lt;a href="http://help.twitter.com/index.php?pg=kb.page&amp;id=75"&gt;txt&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14449362</id>
+      <name>drock777</name>
+      <screen_name>drock777</screen_name>
+      <location></location>
+      <description></description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53041890/airport_normal.jpg</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>3</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221467</id>
+    <text>@harume brel is so dang sweaty.  I MUST be french after all.</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id>801136361</in_reply_to_status_id>
+    <in_reply_to_user_id>6478192</in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>23083</id>
+      <name>Sluggo</name>
+      <screen_name>sluggo</screen_name>
+      <location>ypsilanti</location>
+      <description></description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/15186882/sluggotiny2_normal.jpg</profile_image_url>
+      <url>http://spape.org</url>
+      <protected>false</protected>
+      <followers_count>12</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221466</id>
+    <text>USA we do not see the added value and do not think it feasible</text>
+    <source>im</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14567439</id>
+      <name>patientspatents</name>
+      <screen_name>patientspatents</screen_name>
+      <location></location>
+      <description>Updates from the IGWG in Geneva.  WHO, WHA, IGWG, Patients, Patents</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/53574955/pandp_normal.jpg</profile_image_url>
+      <url></url>
+      <protected>false</protected>
+      <followers_count>14</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221464</id>
+    <text>&#12454;&#12494;&#12454;&#12398;tumblr&#12387;&#12413;&#12356;&#12420;&#12388;&#12290;&#12384;&#12428;&#12363;&#25307;&#24453;&#29366;&#27442;&#12375;&#12356;? http://clipp.in/</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>3187421</id>
+      <name>semi</name>
+      <screen_name>semisan</screen_name>
+      <location></location>
+      <description>o('-'o) &#22799;&#12364;&#26092;&#12398;&#26118;&#34411;&#12391;&#12377;&#12290;&#12415;&#12435;&#12415;&#12435;&#12290;</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52325479/semi2_normal.jpg</profile_image_url>
+      <url>http://iddy.jp/profile/semi/</url>
+      <protected>false</protected>
+      <followers_count>431</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:37 +0000 2008</created_at>
+    <id>801221463</id>
+    <text>has a final project due in less than an hour. I haven't started it or anything.=[</text>
+    <source>web</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>14293648</id>
+      <name>Lacie La Forge</name>
+      <screen_name>CoffeeShopPunk</screen_name>
+      <location>Midland, TX</location>
+      <description>crazy random funness.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52443525/100_0731_normal.JPG</profile_image_url>
+      <url>http://www.myspace.com/lastthingyouwillsee</url>
+      <protected>false</protected>
+      <followers_count>11</followers_count>
+    </user>
+  </status>
+  <status>
+    <created_at>Thu May 01 14:58:36 +0000 2008</created_at>
+    <id>801221460</id>
+    <text>A Happy Staff is a Productive Staff.</text>
+    <source>&lt;a href="http://www.digsby.com/"&gt;digsby&lt;/a&gt;</source>
+    <truncated>false</truncated>
+    <in_reply_to_status_id></in_reply_to_status_id>
+    <in_reply_to_user_id></in_reply_to_user_id>
+    <favorited>false</favorited>
+    <user>
+      <id>5440402</id>
+      <name>Ed Newman</name>
+      <screen_name>BigEd95</screen_name>
+      <location>Waco, TX</location>
+      <description>I am passionate about technology and learning.  I don't have much patience for those that don't want to learn.</description>
+      <profile_image_url>http://s3.amazonaws.com/twitter_production/profile_images/52070164/BigEd_normal.jpg</profile_image_url>
+      <url>http://www.edlink12.net/edlink12</url>
+      <protected>false</protected>
+      <followers_count>35</followers_count>
+    </user>
+  </status>
+</statuses>

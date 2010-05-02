@@ -1,0 +1,95 @@
+  def init
+    POS1 = [0.0, 5.0, 20.0, 0.0]
+    POS2 = [0.0, -5.0, 20.0, 0.0]
+
+    GLUT.InitDisplayMode(GLUT::RGBA | GLUT::DEPTH | GLUT::DOUBLE)
+    GLUT.InitWindowPosition(0, 0)
+    GLUT.InitWindowSize(800, 600)
+    GLUT.CreateWindow('World')
+
+    # Initialise OpenGL state for 3D rendering.
+    GL.ShadeModel(GL::SMOOTH)
+    GL.Enable(GL::DEPTH_TEST)
+    GL.DepthFunc(GL::LEQUAL)
+    GL.ClearColor(0.0, 0.0, 0.0, 0.0)
+    GL.Hint(GL::PERSPECTIVE_CORRECTION_HINT, GL::NICEST)
+
+    #GL.Enable(GL::CULL_FACE)
+    #GL.Enable(GL::LIGHTING)
+    #GL.Lightfv(GL::LIGHT0, GL::POSITION, POS1)
+    #GL.Enable(GL::LIGHT0)
+    #GL.Lightfv(GL::LIGHT1, GL::POSITION, POS2)
+    #GL.Enable(GL::LIGHT1)
+    #GL.Enable(GL::TEXTURE_2D)
+    #GL.TexEnvf(GL::TEXTURE_ENV, GL::TEXTURE_ENV_MODE, GL::DECAL)
+
+    @ground = GL.GenLists(1)
+    GL.NewList(@ground, GL::COMPILE)
+      GL.Material(GL::FRONT, GL::AMBIENT_AND_DIFFUSE, [0.8,0.8,0.0,1.0])
+      GL.Material(GL::BACK, GL::AMBIENT_AND_DIFFUSE, [0.8,0.8,0.0,1.0])
+      GL.Begin(GL::QUADS)
+        GL.Vertex3f(-1, 0, -1)
+        GL.Vertex3f(-1, 0, 1)
+        GL.Vertex3f(1, 0, 1)
+        GL.Vertex3f(1, 0, -1)
+      GL.End()
+    GL.EndList()
+    @pan = GL.GenLists(1)
+    GL.NewList(@pan, GL::COMPILE)
+      GL.Material(GL::FRONT, GL::AMBIENT_AND_DIFFUSE, [0.8,0.1,0.0,1.0])
+      GL.Material(GL::BACK, GL::AMBIENT_AND_DIFFUSE, [0.8,0.1,0.0,1.0])
+      # make texture
+      img = "\x0\x0\xFF\x0\x0\x0\xFF\xFF\xFF\xFF\xFF\xFF\x0\x0\xFF\x0\x0\x0\xFF\xFF\xFF\xFF\xFF\xFF\x0\x0\xFF\x0\x0\x0\xFF\xFF\xFF\xFF\xFF\xFF\x0\x0\xFF\x0\x0\x0\xFF\xFF\xFF\xFF\xFF\xFF"
+      #GL.DrawPixels(2,2,GL::RGB,GL::UNSIGNED_BYTE,img)
+      texid = GL.GenTextures(1)
+      GL.BindTexture(GL::TEXTURE_2D, texid[0])
+      GL.TexParameteri(GL::TEXTURE_2D, GL::TEXTURE_WRAP_S, GL::CLAMP);
+      GL.TexParameteri(GL::TEXTURE_2D, GL::TEXTURE_WRAP_T, GL::CLAMP);
+      GL.TexParameteri(GL::TEXTURE_2D, GL::TEXTURE_MAG_FILTER,GL::NEAREST);
+      GL.TexParameteri(GL::TEXTURE_2D, GL::TEXTURE_MIN_FILTER,GL::NEAREST);      
+      GL.TexImage2D(GL::TEXTURE_2D, 0, 3, 4, 4, 0, GL::RGB, GL::UNSIGNED_BYTE, img)
+      #GL.TexParameterf(GL::TEXTURE_2D, GL::TEXTURE_MAG_FILTER, GL::LINEAR)
+      #GL.TexParameterf(GL::TEXTURE_2D, GL::TEXTURE_MIN_FILTER, GL::LINEAR)
+      #glClearColor(0, 0.3, 0.6, 1);
+      #end texture 
+      GL.Begin(GL::QUADS)
+        GL.Vertex3f(-0.5, 0, 0)
+        GL.Vertex3f(0.5, 0, 0)
+        GL.Vertex3f(0.5, 1, 0)
+        GL.Vertex3f(-0.5, 1, 0)
+      GL.End()
+    GL.EndList()
+    GL.Enable(GL::NORMALIZE)
+
+    err = GL.GetError
+    raise "GL Error code: #{err}" if err != 0
+
+  end
+  
+  def draw
+      GL.Clear(GL::COLOR_BUFFER_BIT | GL::DEPTH_BUFFER_BIT);
+
+      GL.PushMatrix()
+        GL.Translate(0.0, 0.0, -10.0)
+        GL.Rotate(@view_rotx, 1.0, 0.0, 0.0)
+        GL.Rotate(@view_roty, 0.0, 1.0, 0.0)
+        GL.Rotate(@view_rotz, 0.0, 0.0, 1.0)
+
+        GL.PushMatrix()
+          GL.CallList(@ground)
+          GL.CallList(@pan)
+        GL.PopMatrix()
+      GL.PopMatrix()
+
+      GLUT.SwapBuffers()
+
+      @frames += 1
+      t = GLUT.Get(GLUT::ELAPSED_TIME)
+      if t - @t0 >= 5000
+         seconds = (t - @t0) / 1000.0
+         fps = @frames / seconds
+         printf("%d frames in %6.3f seconds = %6.3f FPS\n", @frames, seconds, fps)
+         @t0, @frames = t, 0
+         exit if defined? @autoexit and t >= 999.0 * @autoexit
+      end
+   end

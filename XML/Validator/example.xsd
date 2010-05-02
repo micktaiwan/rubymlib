@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="workflow" type="workflow">
+		<xs:annotation>
+			<xs:documentation>
+				Root element of the workflow file
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+	<xs:complexType name="workflow">
+		<xs:sequence>
+			<xs:element name="model-list" type="model-list" maxOccurs="1"
+				minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						List of models the workflow will apply on
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rule-list" type="rule-list" maxOccurs="1"
+				minOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						List of rules in this model
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="model-list">
+		<xs:sequence>
+			<xs:element name="model" type="xs:string" minOccurs="1"
+				maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="rule-list">
+		<xs:sequence>
+			<xs:element name="rule" type="rule" minOccurs="0"
+				maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						A rule is either a if/then/else or a select/case
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:group name="if_then_else">
+		<xs:sequence>
+			<xs:element name="if" type="if" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						If : condition of the block
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="then" type="then" minOccurs="1"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Then : what will be done if the condition is ok
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="else" type="else" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Else : what will be done if the condition is not ok
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:simpleType name="yes_no">
+		<xs:annotation>
+			<xs:documentation>
+				A simple yes/no choice
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes" />
+			<xs:enumeration value="no" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="rule">
+		<xs:choice>
+			<xs:group ref="if_then_else">
+				<xs:annotation>
+					<xs:documentation>
+						If/then/else block
+					</xs:documentation>
+				</xs:annotation>
+			</xs:group>
+			<xs:element name="select" type="select">
+				<xs:annotation>
+					<xs:documentation>
+						Select/case block
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="onCreate" type="yes_no" />
+		<xs:attribute name="onEdit" type="yes_no" />
+		<xs:attribute name="onSave" type="yes_no" />
+		<xs:attribute name="onGenerate" type="yes_no" />
+	</xs:complexType>
+
+	<xs:complexType name="if">
+		<xs:choice>
+			<xs:element name="field" type="field">
+				<xs:annotation>
+					<xs:documentation>
+						Single test on a field
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="or" type="or">
+				<xs:annotation>
+					<xs:documentation>
+						Or block : Logical disjunction
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="and" type="and">
+				<xs:annotation>
+					<xs:documentation>
+						And block : Logical conjunction
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="then">
+		<xs:choice>
+			<xs:element name="action-list" type="action-list">
+				<xs:annotation>
+					<xs:documentation>
+						List of actions to perform
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="if_then_else" />
+			<xs:element name="select" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="else">
+		<xs:choice>
+			<xs:element name="action-list" type="action-list">
+				<xs:annotation>
+					<xs:documentation>
+						List of actions to perform
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:group ref="if_then_else" />
+			<xs:element name="select" />
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="select">
+		<xs:sequence>
+			<xs:element name="case" type="case" minOccurs="0"
+				maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						A condition on the specified field and its action
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="default" type="default" minOccurs="1"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Default case
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="field" type="xs:string">
+			<xs:annotation>
+				<xs:documentation>
+					The field to test
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+		<xs:attribute name="link" type="link">
+			<xs:annotation>
+				<xs:documentation>
+					Where to search the field (relative to the
+					element)
+				</xs:documentation>
+			</xs:annotation>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="case">
+		<xs:sequence>
+			<xs:element name="action-list" type="action-list" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Actions to perform in this case
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="value" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Test on value
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="empty" type="yes_no">
+					<xs:annotation>
+						<xs:documentation>
+							Test if element is empty or not
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="value-id" type="xs:integer">
+					<xs:annotation>
+						<xs:documentation>
+							Test the id in case of a code field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="under" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Test if the code field current value is under
+							one specific branch (name given by the string)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="under-id" type="xs:integer">
+					<xs:annotation>
+						<xs:documentation>
+							Test if the code field current value is under
+							one specific branch (id given by the integer)
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="like" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Test if the field contains specified string
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="default">
+		<xs:sequence>
+			<xs:element name="action-list" type="action-list" minOccurs="0"
+				maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>
+						Actions to perform
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="and">
+		<xs:sequence>
+			<xs:element name="field" type="field" minOccurs="1"
+				maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The conditions
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="or">
+		<xs:sequence>
+			<xs:element name="field" type="field" minOccurs="1"
+				maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						The conditions
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="field">
+		<xs:choice>
+			<xs:element name="value" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Test on value
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="empty" type="yes_no">
+				<xs:annotation>
+					<xs:documentation>
+						Test if element is empty or not
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value-id" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>
+						Test the id in case of a code field
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="under" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Test if the code field current value is under one specific branch
+						(name given by the string)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="under-id" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>
+						Test if the code field current value is under one specific branch (id
+						given by the integer)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="like" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						Test if the field contains specified string
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:string" />
+		<xs:attribute name="link" type="link" />
+	</xs:complexType>
+
+	<xs:simpleType name="link">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="itself">
+				<xs:annotation>
+					<xs:documentation>
+						Select the current node
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="father">
+				<xs:annotation>
+					<xs:documentation>
+						Select the father node
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="parents">
+				<xs:annotation>
+					<xs:documentation>
+						Select all parents
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="direct-children">
+				<xs:annotation>
+					<xs:documentation>
+						Select direct children
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="all-children">
+				<xs:annotation>
+					<xs:documentation>
+						Select all children
+					</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="action-list">
+		<xs:sequence>
+			<xs:element name="action" type="action"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="action">
+		<xs:sequence>
+			<xs:element name="field" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>
+						The field to modify
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="text-init" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Put a value in a text field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="textarea-init" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Put a value in a textarea field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="date-init" type="xs:date">
+					<xs:annotation>
+						<xs:documentation>
+							Put a date in a date field. The date must be formated as this : YYYY-MM-DD
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="code-init" type="code-init">
+					<xs:annotation>
+						<xs:documentation>
+							Put a code in a code field, by its value or id
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="numeric-init" type="xs:decimal">
+					<xs:annotation>
+						<xs:documentation>
+							Put a numeric value in a field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="http-init" type="http-init">
+					<xs:annotation>
+						<xs:documentation>
+							Put a link and its name in a http field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="link-init" type="xs:integer">
+					<xs:annotation>
+						<xs:documentation>
+							Put a link in a link field by its id
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="list-init" type="code-init">
+					<xs:annotation>
+						<xs:documentation>
+							Init a list by specying its father code
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="field-disable" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Disable specified field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="field-hide" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Hide specified field
+						</xs:documentation>
+					</xs:annotation>				
+				</xs:element>
+				<xs:element name="list-elements-disable" type="list-elements-disable">
+					<xs:annotation>
+						<xs:documentation>
+							Disable elements in a field
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="modif-rights">
+					<xs:annotation>
+						<xs:documentation>
+							Modify the rights on an element
+						</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="view"/>
+							<xs:enumeration value="modify"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="warning" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Display non-blocking warning
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="error" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>
+							Display blocking error
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="code-init">
+		<xs:choice>
+			<xs:element name="value" type="xs:string"/>
+			<xs:element name="id" type="xs:integer"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="http-init">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="link" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="list-elements-disable">
+		<xs:sequence>
+			<xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Element to disable (precised by its value)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="id" type="xs:int" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>
+						Element to disable (precised by its id)
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

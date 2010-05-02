@@ -1,0 +1,33 @@
+grammar Grammar
+
+  rule journal
+    hour note {
+      def value
+        hour.value + " " + note.value + "END"
+      end
+      }
+  end
+
+  rule hour
+    [0-9] [0-9] ':' [0-9] [0-9] space {
+      def value
+        text_value
+      end
+      }
+  end
+  
+  rule note
+    (!'\n' .)* '\n' {
+      def value
+        text_value
+      end
+      }
+  end
+  
+  
+  rule space
+    ' '*
+  end
+
+end
+
