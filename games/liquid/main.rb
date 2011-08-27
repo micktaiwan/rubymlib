@@ -60,7 +60,7 @@ class LiquidWorld < World
     acc = MVector.new
     @particules.each { |p|
       next if p == c
-      acc += p.speed if p.pos.dist(c.pos) < 0.1
+      acc += p.speed/10 if p.pos.dist(c.pos) < 0.5
       }
     acc
   end

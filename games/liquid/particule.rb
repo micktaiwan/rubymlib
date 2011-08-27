@@ -12,7 +12,7 @@ class Particule
 
   def update
     @speed += @acc
-    @speed /= 1.001
+    @speed *= 0.95
     @pos = @pos + @speed
   end
 
